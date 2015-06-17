@@ -6,6 +6,9 @@ This [ember-cli-deploy](https://github.com/ember-cli/ember-cli-deploy) index ada
 
 This adapter is intended for those who have an existing REST API and would like to leverage it to manage their index.html revisions. It is ideal for internal system environments (not in the cloud) or in the case that adding additional components such as a NoSQL is prohibitive. For such environments, this adapter will enable the usage of the existing infrastructure to accommodate, still, a **Lightning Fast Deployments** process.
 
+## To use
+`npm install ember-deploy-rest-index`
+
 ## Commands
 
 The adapter implements the following commands as per the `ember-cli-deploy` interface:
