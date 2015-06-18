@@ -1,6 +1,6 @@
 {
   "name": "ember-deploy-rest-index",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "An index ember-cli-deploy adapter for REST backends",
   "directories": {
     "doc": "doc",

@@ -15,11 +15,10 @@ The adapter implements the following commands as per the `ember-cli-deploy` inte
 
 * `deploy` - Makes a POST to upload the index.html information with the following payload:  
   * The revision id
-  * The target environment
   * The entirety of the index.html file  
 
 
-* `deploy:list` - Makes a GET call to get all uploaded revisions for a given environment
+* `deploy:list` - Makes a GET call to get all uploaded revisions
 * `deploy:activate` - Makes a PUT call to activate the specified revisions
 
 ## Config
@@ -27,7 +26,6 @@ The adapter implements the following commands as per the `ember-cli-deploy` inte
 Sample config in your deploy.js file:
 ```
 store: {
-  environment: 'qa',
   type: 'REST',
   serviceHost: 'http://leojh.com',
   serviceNamespace: 'api',
@@ -35,13 +33,12 @@ store: {
 }
 
 ```
-* `environment` - gets passed to the service as query string parameter
 * `type` - Must be 'REST' to use this adapter
 * `serviceHost` - the root URL for the service
 * `serviceNamespace` - path to the service
 * `serviceIndexVersionResource` - the name of your resource responsible for handling your revisions
 
-The combination of config settings will help construct the target URLs for calling your service. For example, given the config above, the `deploy:list --environment qa` command will result in: `GET http://leojh.com/api/ember-revisions?environment=qa`
+The combination of config settings will help construct the target URLs for calling your service. For example, given the config above, the `deploy:list` command will result in: `GET http://leojh.com/api/ember-revisions`
 
 ## TODOs:
 
