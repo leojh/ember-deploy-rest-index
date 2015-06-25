@@ -13,25 +13,50 @@ This adapter is intended for those who have an existing REST API and would like 
 
 The adapter implements the following commands as per the `ember-cli-deploy` interface:
 
-* `deploy` - Makes a POST to upload the index.html information with the following payload:  
-  * The revision id
-  * The entirety of the index.html file  
+* `deploy` - Makes a POST to upload the index.html information:  
 
+  **Sample Request:**
+
+  ```js
+  HTTP POST http://leojh.com/api/ember-revisions
+  {
+    "id": 'ember-app:9c0568d',
+    "indexHtml": '<html>...</html>'
+  }
+  ```
+
+  **Sample Response:** HTTP 200 OK, 201 CREATED, or 204 NO CONTENT with no content.
 
 * `deploy:list` - Makes a GET call to get all uploaded revisions
+
+  **Sample Request:** ``HTTP GET https://leojh.com/api/ember-revisions``
+
+  **Sample Response:**
+  ```js
+  HTTP OK
+  [
+    {"id":"ember-app:1bdc67a","createdOn":"2015-06-19T09:58:00-04:00"},
+    {"id":"ember-app:2251eda","createdOn":"2015-06-22T10:51:00-04:00"}
+    ...
+  ]
+  ```
+
 * `deploy:activate` - Makes a PUT call to activate the specified revisions
+
+  **Sample Request:** `HTTP PUT https://leojh.com/api/ember-revisions/ember-app:1bdc67a`
+
+  **Sample Response:** HTTP 200 OK, or 204 NO CONTENT with no content.
 
 ## Config
 
 Sample config in your deploy.js file:
-```
+```js
 store: {
   type: 'REST',
   serviceHost: 'http://leojh.com',
   serviceNamespace: 'api',
   serviceIndexVersionResource: 'ember-revisions'
 }
-
 ```
 * `type` - Must be 'REST' to use this adapter
 * `serviceHost` - the root URL for the service
