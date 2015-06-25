@@ -1,6 +1,6 @@
 {
   "name": "ember-deploy-rest-index",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "An index ember-cli-deploy adapter for REST backends",
   "directories": {
     "doc": "doc",
@@ -38,10 +38,11 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.0.0",
-    "node-rest-client": "^1.5.1",
     "chalk": "^1.0.0",
-    "core-object": "^1.1.0"
+    "core-object": "^1.1.0",
+    "ember-cli-babel": "^5.0.0",
+    "moment": "^2.10.3",
+    "node-rest-client": "^1.5.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
