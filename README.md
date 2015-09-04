@@ -65,6 +65,11 @@ store: {
 
 The combination of config settings will help construct the target URLs for calling your service. For example, given the config above, the `deploy:list` command will result in: `GET http://leojh.com/api/ember-revisions`
 
+## Notes
+Always specify the `environment` flag when running any `ember deploy` commands. Similarly, when specifying a revision to activate, specify the `revision` flag.
+
+Example: `ember deploy:activate --revision ember-app:1234 --environment qa`
+
 ## TODOs:
 
 1. Authentication header
