@@ -1,5 +1,7 @@
 # ember-deploy-rest-index
 
+[![](https://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/plugins/ember-deploy-rest-index.svg)](http://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/)
+
 This [ember-cli-deploy](https://github.com/ember-cli/ember-cli-deploy) index adapter uses HTTP REST commands to handle all operations pertaining to the index.html deploy process. The server is, therefore, responsible for managing index.html revisions.
 
 ## Purpose
